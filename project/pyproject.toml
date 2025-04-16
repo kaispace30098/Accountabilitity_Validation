@@ -6,9 +6,10 @@ authors = ["Tom <Tom.Chang@azed.gov>"]
 packages = [{include = "project", from = "src"}]
 
 [tool.poetry.dependencies]
-python = ">=3.12"
+python = ">=3.11.5"
 pyodbc = ">=5.2.0,<6.0.0"
 pandas = ">=2.2.3,<3.0.0"
+pytest = ">=8.3.5,<9.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
