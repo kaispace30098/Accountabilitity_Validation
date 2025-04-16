@@ -1,19 +1,18 @@
-[project]
+[tool.poetry]
 name = "project"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Your Name",email = "you@example.com"}
-]
-readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-]
-
-[tool.poetry]
+authors = ["Tom <Tom.Chang@azed.gov>"]
 packages = [{include = "project", from = "src"}]
 
+[tool.poetry.dependencies]
+python = ">=3.12"
+pyodbc = ">=5.2.0,<6.0.0"
+pandas = ">=2.2.3,<3.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
