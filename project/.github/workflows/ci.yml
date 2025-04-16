@@ -1,0 +1,25 @@
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main  # or any other branch you want to target for PRs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # GitHub Actions runner image
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2  # Check out the repository code
+
+    - name: Set up Docker
+      uses: docker/setup-buildx-action@v2  # Set up Docker Buildx for multi-platform builds
+
+    - name: Build Docker image
+      run: |
+        docker build -t myapp .  # Build the Docker image using the Dockerfile in the root directory
+
+    - name: Run tests with pytest inside Docker container
+      run: |
+        docker run --rm myapp pytest  # Run the tests inside the container
