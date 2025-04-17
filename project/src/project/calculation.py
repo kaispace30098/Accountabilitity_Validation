@@ -6,4 +6,4 @@ def calculate_school_average(data):
     if not data:
         return 0
     else:
-        return sum(data)/len(data)
+        return sum(data)/len(data) +0
