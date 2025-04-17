@@ -25,7 +25,6 @@ RUN pip install --upgrade pip && \
 # Copy the rest of your application code
 COPY . .
 
-# Set PYTHONPATH to include the src directory
 ENV PYTHONPATH="/app/project/src"
 
 # Run tests
