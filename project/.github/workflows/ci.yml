@@ -7,6 +7,7 @@ on:
 
 jobs:
   build:
+    name: python test       # <-- this 'python test' is what you'll search for
     runs-on: ubuntu-latest  # GitHub Actions runner image
     
     steps:
