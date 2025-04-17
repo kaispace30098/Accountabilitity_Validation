@@ -3,6 +3,7 @@ FROM python:3.12.6-slim-bookworm
 # Set working directory
 WORKDIR /app
 
+
 # Install necessary packages
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -25,6 +26,7 @@ RUN pip install --upgrade pip && \
 COPY . .
 
 # Set PYTHONPATH to include the src directory
-ENV PYTHONPATH="/app/src"
+ENV PYTHONPATH="/app/project/src"
+
 # Run tests
-CMD ["pytest"]
+CMD ["pytest"]&#8203;:contentReference[oaicite:4]{index=4}
