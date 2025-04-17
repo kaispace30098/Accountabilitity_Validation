@@ -12,7 +12,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 # Copy requirements.txt
-COPY requirements.txt .
+COPY project/requirements.txt .
 
 # Install Python dependencies with trusted hosts
 RUN pip install --upgrade pip && \
