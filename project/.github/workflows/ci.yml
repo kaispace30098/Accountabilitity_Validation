@@ -19,7 +19,7 @@ jobs:
 
       - name: Build Docker image
         run: |
-          docker build -t myapp -f ./Dockerfile .
+          docker build -t myapp -f ./project/Dockerfile .
 
       - name: Run tests with pytest inside Docker container
         run: |
