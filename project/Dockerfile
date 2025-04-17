@@ -25,8 +25,7 @@ RUN pip install --upgrade pip && \
 # Copy the rest of your application code
 COPY . .
 
-# Set PYTHONPATH to include the src directory
-ENV PYTHONPATH="/app/project/src"
+ENV PYTHONPATH="/app/src"
 
 # Run tests
 CMD ["pytest"]&#8203;:contentReference[oaicite:4]{index=4}
