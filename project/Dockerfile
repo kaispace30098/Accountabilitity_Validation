@@ -24,5 +24,7 @@ RUN pip install --upgrade pip && \
 # Copy the rest of your application code
 COPY . .
 
+# Set PYTHONPATH to include the src directory
+ENV PYTHONPATH="/app/src"
 # Run tests
 CMD ["pytest"]
